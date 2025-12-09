@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Sticky UPDS | Maycol Robin Quispe Calani</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header UPDS con información del estudiante -->
+    <header class="upds-header">
+        <div class="container">
+            <div class="upds-info">
+                <div class="upds-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>UPDS | Universidad Privada Domingo Savio</span>
+                </div>
+                <div class="student-badge">
+                    <button class="student-btn" id="studentBtn">
+                        <i class="fas fa-user-graduate"></i>
+                            <span>
+                                <p>Portafolio de Estudiante
+                                    <br>
+                                        Desarrollo Web II - 2025
+                                    <br>    
+                                </p>
+                            </span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="student-dropdown" id="studentDropdown">
+                        <div class="student-info">
+                            <img src="https://ui-avatars.com/api/?name=Maycol+Quispe&background=1a3a8f&color=fff&size=80" alt="Avatar" class="student-avatar">
+                            <div class="student-details">
+                                <h3>Maycol Robin Quispe Calani</h3>
+                                <p><i class="fas fa-book"></i> Estudiante de Desarrollo Web</p>
+                                <p><i class="fas fa-university"></i> UPDS - Modalidad Virtual</p>
+                                <p><i class="fas fa-calendar"></i> 2025</p>
+                            </div>
+                        </div>
+                        <div class="student-skills">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Position Sticky</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación Sticky -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">📍</span>
+                <span class="logo-text">StickyNav <span class="logo-sub">by UPDS</span></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menú de navegación">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#concepto" class="nav-link"><i class="fas fa-lightbulb"></i> Concepto</a></li>
+                <li><a href="#features" class="nav-link"><i class="fas fa-star"></i> Features</a></li>
+                <li><a href="#implementacion" class="nav-link"><i class="fas fa-code"></i> Implementación</a></li>
+                <li><a href="#pricing" class="nav-link"><i class="fas fa-tags"></i> Precios</a></li>
+                <li><a href="#testimonios" class="nav-link"><i class="fas fa-comments"></i> Testimonios</a></li>
+                <li><a href="#contacto" class="nav-link btn-cta"><i class="fas fa-rocket"></i> Comenzar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><i class="fas fa-thumbtack"></i> Navbar con Position: Sticky</h1>
+                <p class="subtitle">Un estudio completo sobre la propiedad CSS <code>position: sticky</code> aplicado a barras de navegación</p>
+                <p class="hero-description">Scroll hacia abajo y observa cómo la navegación se "pega" en la parte superior con un efecto suave y profesional.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Funcional con CSS puro</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">60+</span>
+                        <span class="stat-label">Compatibilidad navegadores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0.3s</span>
+                        <span class="stat-label">Transición suave</span>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <p>Scroll Down para explorar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concepto Section -->
+    <section id="concepto" class="section">
+        <div class="container">
+            <h2><i class="fas fa-book-open"></i> Concepto Sticky</h2>
+            <p class="section-intro">Entiende cómo funciona <code>position: sticky</code> y por qué es diferente a otras propiedades de posicionamiento.</p>
+            
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <i class="fas fa-arrows-alt-v"></i>
+                    </div>
+                    <h3>Comportamiento Híbrido</h3>
+                    <p>Combina <code>position: relative</code> y <code>position: fixed</code>. Permanece en el flujo normal hasta alcanzar el umbral definido.</p>
+                </div>
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>En el Flujo del Documento</h3>
+                    <p>A diferencia de <code>fixed</code>, no se remueve del flujo normal, manteniendo el layout consistente.</p>
+                </div>
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Nativo</h3>
+                    <p>Se adapta automáticamente a diferentes tamaños de pantalla sin necesidad de media queries complejas.</p>
+                </div>
+            </div>
+            
+            <div class="code-example">
+                <h4><i class="fas fa-code"></i> Ejemplo de Implementación:</h4>
+                <pre><code>.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section section-alt">
+        <div class="container">
+            <h2><i class="fas fa-cogs"></i> Características de Position: Sticky</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon">📍</div>
+                        <div class="feature-badge">Esencial</div>
+                    </div>
+                    <h3>Se Pega al Scrollear</h3>
+                    <p>Al llegar a <code>top: 0</code>, el navbar se comporta como <code>position: fixed</code> manteniéndose visible.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Umbral configurable</li>
+                        <li><i class="fas fa-check-circle"></i> Transición suave</li>
+                        <li><i class="fas fa-check-circle"></i> Sin JavaScript</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon">🔄</div>
+                        <div class="feature-badge">Flexible</div>
+                    </div>
+                    <h3>En el Flujo del Documento</h3>
+                    <p>A diferencia de <code>fixed</code>, sticky permanece en el flujo normal del documento.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Layout consistente</li>
+                        <li><i class="fas fa-check-circle"></i> No afecta otros elementos</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive natural</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon">⚡</div>
+                        <div class="feature-badge">Rendimiento</div>
+                    </div>
+                    <h3>Mejor Performance</h3>
+                    <p>No requiere JavaScript para funcionar (aunque JS mejora la experiencia visual).</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Menos repaints</li>
+                        <li><i class="fas fa-check-circle"></i> Animaciones CSS nativas</li>
+                        <li><i class="fas fa-check-circle"></i> Compatible con GPU</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon">🎨</div>
+                        <div class="feature-badge">Diseño</div>
+                    </div>
+                    <h3>Estilos Dinámicos</h3>
+                    <p>Cambia de apariencia al estar "pegado" usando JavaScript para mejor UX.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Efectos blur</li>
+                        <li><i class="fas fa-check-circle"></i> Cambio de color</li>
+                        <li><i class="fas fa-check-circle"></i> Sombras dinámicas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementación Section -->
+    <section id="implementacion" class="section">
+        <div class="container">
+            <h2><i class="fas fa-laptop-code"></i> Implementación Paso a Paso</h2>
+            <div class="implementation-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Estructura HTML</h3>
+                        <p>Crea la estructura básica del navbar con tus enlaces de navegación.</p>
+                        <div class="step-code">
+                            &lt;nav class="navbar"&gt;<br>
+                            &nbsp;&nbsp;&lt;div class="container"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="logo"&gt;Logo&lt;/a&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="nav-menu"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                            &nbsp;&nbsp;&lt;/div&gt;<br>
+                            &lt;/nav&gt;
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>CSS Básico</h3>
+                        <p>Aplica <code>position: sticky</code> con un umbral de activación.</p>
+                        <div class="step-code">
+                            .navbar {<br>
+                            &nbsp;&nbsp;position: sticky;<br>
+                            &nbsp;&nbsp;top: 0;<br>
+                            &nbsp;&nbsp;z-index: 1000;<br>
+                            &nbsp;&nbsp;transition: all 0.3s ease;<br>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>JavaScript Mejorado</h3>
+                        <p>Añade interacciones para cambiar estilos al hacer scroll.</p>
+                        <div class="step-code">
+                            window.addEventListener('scroll', () => {<br>
+                            &nbsp;&nbsp;if (window.scrollY > 50) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;navbar.classList.add('scrolled');<br>
+                            &nbsp;&nbsp;} else {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;navbar.classList.remove('scrolled');<br>
+                            &nbsp;&nbsp;}<br>
+                            });
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section section-alt">
+        <div class="container">
+            <h2><i class="fas fa-tags"></i> Planes de Implementación</h2>
+            <p class="section-intro">Selecciona el plan que mejor se adapte a tus necesidades de desarrollo.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Básico</h3>
+                        <p>Para proyectos personales</p>
+                    </div>
+                    <div class="price">$9<span>/mes</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Navbar Sticky básico</li>
+                        <li><i class="fas fa-check"></i> 5 proyectos simultáneos</li>
+                        <li><i class="fas fa-check"></i> Soporte por email</li>
+                        <li><i class="fas fa-times"></i> Efectos avanzados</li>
+                        <li><i class="fas fa-times"></i> Soporte prioritario</li>
+                    </ul>
+                    <button class="pricing-btn">Seleccionar Plan</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Más Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <p>Para desarrolladores profesionales</p>
+                    </div>
+                    <div class="price">$29<span>/mes</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Todo del plan Básico</li>
+                        <li><i class="fas fa-check"></i> Proyectos ilimitados</li>
+                        <li><i class="fas fa-check"></i> Efectos blur y sombras</li>
+                        <li><i class="fas fa-check"></i> Animaciones personalizadas</li>
+                        <li><i class="fas fa-check"></i> Soporte prioritario</li>
+                    </ul>
+                    <button class="pricing-btn featured-btn">Seleccionar Plan</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p>Para equipos y empresas</p>
+                    </div>
+                    <div class="price">$99<span>/mes</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Todo del plan Pro</li>
+                        <li><i class="fas fa-check"></i> Customización total</li>
+                        <li><i class="fas fa-check"></i> Integración con frameworks</li>
+                        <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Capacitación incluida</li>
+                    </ul>
+                    <button class="pricing-btn">Contactar Ventas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="section">
+        <div class="container">
+            <h2><i class="fas fa-comments"></i> Testimonios</h2>
+            <p class="section-intro">Lo que dicen otros desarrolladores sobre la implementación de navbar sticky.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="María García" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>María García</h4>
+                            <p>UX Designer Senior</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="quote">"Implementar position: sticky en nuestra navegación mejoró significativamente la experiencia de usuario. Los usuarios ahora encuentran lo que buscan más rápido y la navegación es más intuitiva."</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Carlos Pérez" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Carlos Pérez</h4>
+                            <p>Frontend Developer</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="quote">"Como desarrollador frontend, siempre busco soluciones eficientes. Position: sticky fue mucho más fácil de implementar de lo que pensaba, y el rendimiento es excelente incluso en dispositivos móviles."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section section-alt">
+        <div class="container">
+            <h2><i class="fas fa-envelope"></i> ¿Listo para implementar?</h2>
+            <p class="section-intro">Contáctanos para más información sobre implementación de navbar sticky en tus proyectos.</p>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Selecciona tu plan de interés</option>
+                            <option value="basico">Plan Básico ($9/mes)</option>
+                            <option value="pro">Plan Pro ($29/mes)</option>
+                            <option value="enterprise">Plan Enterprise ($99/mes)</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Describe tu proyecto o consulta..." rows="5" required></textarea>
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <h3><i class="fas fa-headset"></i> Soporte Directo</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Teléfono</strong>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>soporte@stickynav-upds.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Horario de atención</strong>
+                            <p>Lun-Vie: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">📍</span>
+                    <span class="logo-text">StickyNav <span class="logo-sub">by UPDS</span></span>
+                    <p class="footer-description">Un proyecto educativo sobre position: sticky desarrollado por estudiantes de UPDS.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#concepto">Concepto</a>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Precios</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Recursos</h4>
+                    <a href="#">Documentación</a>
+                    <a href="#">Ejemplos de código</a>
+                    <a href="#">Guías de implementación</a>
+                    <a href="#">Comunidad</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Suscríbete para recibir novedades sobre CSS y desarrollo web.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Tu correo">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StickyNav UPDS Demo. Desarrollo educativo por <strong>Maycol Robin Quispe Calani</strong> | Universidad Privada Domingo Savio</p>
+                <div class="footer-credits">
+                    <span><i class="fas fa-code"></i> Hecho con ❤️ para la comunidad de desarrolladores</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón "Volver Arriba" -->
+    <button class="btn-top" id="btnTop" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
